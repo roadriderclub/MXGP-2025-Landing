@@ -1,0 +1,12 @@
+$(document).ready(function () {
+    $.post("https://" + domain_wl + "/web/page/increase/visit/" + tkn_wl + "/");
+    setTimeout(function () {
+        $.post("https://" + domain_wl + "/web/page/increase/reader/" + tkn_wl + "/");
+    }, 10000);
+
+    $(window).scroll(function () {
+        $.post("https://" + domain_wl + "/web/page/increase/scroll/" + tkn_wl + "/");
+        $(window).off("scroll");
+    });
+});
+
